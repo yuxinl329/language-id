@@ -10,7 +10,7 @@ LANGUAGE_CODES = []
 def create_language_code():
     with codecs.open('./data/train/train_labels.txt', 'r', encoding='utf-8', errors='ignore') as f:
         for line in f:
-            LANGUAGE_CODES.add(line)
+            LANGUAGE_CODES.add(line[:3])
 
 def start_pad(n):
     ''' Returns a padding string of length n to append to the front of text

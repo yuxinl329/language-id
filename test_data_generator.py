@@ -16,3 +16,7 @@ with codecs.open('./data/test/LanideNN_testset.txt', 'r', encoding='utf-8', erro
                 if line[:3] in languages:
                     file2.write(line[4:])
                     file3.write(line[:3] + '\n')
+                elif line[:3] == 'zho':
+                    file2.write(line[4:])
+                    file3.write('cmn' + '\n')
+
